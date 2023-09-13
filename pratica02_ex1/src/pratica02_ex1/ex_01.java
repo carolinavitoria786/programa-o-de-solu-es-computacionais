@@ -15,7 +15,7 @@ public class ex_01 {
 		if(media >= 7.0) {
 			System.out.println("Aluno aprovado com " + media);
 		}else {
-			System.out.println("Aluno aprovado com " + media);
+			System.out.println("Aluno reprovado com " + media);
 		}
 		scanner.close();
 	}

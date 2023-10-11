@@ -20,7 +20,7 @@ public class pratica1_ex1 {
 		
 		media = (nota1 + nota2 + nota3) / 3;
 		
-		System.out.println("Sua media eh:" + media);
+		System.out.println("Sua media é:" + media);
 		input.close(); 
 	}
 	

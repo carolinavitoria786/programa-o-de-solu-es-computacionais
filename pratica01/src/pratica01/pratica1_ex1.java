@@ -3,22 +3,25 @@ package pratica01;
 import java.util.Scanner;
 
 public class pratica1_ex1 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Digite a primeira nota: ");
-        double nota01 = input.nextDouble();
-
-        System.out.println("Digite a segunda nota: ");
-        double nota02 = input.nextDouble();
-
-        System.out.println("Digite a terceira nota: ");
-        double nota03 = input.nextDouble();
-        
-        double media = (nota01 + nota02 + nota03) / 3.0;
-
-        System.out.println("A média aritmética é: " + media);
-
-        input.close();
-    }
+	public static void main(String args []) {
+		
+		Scanner input = new Scanner( System.in );
+		
+		double nota1, nota2, nota3, media;
+		
+		System.out.print("Insira a primeira nota:");
+		nota1 = input.nextDouble();
+		
+		System.out.print("Insira a segunda nota:");
+		nota2 = input.nextDouble();
+		
+		System.out.print("Insira a terceira nota:");
+		nota3 = input.nextDouble();
+		
+		media = (nota1 + nota2 + nota3) / 3;
+		
+		System.out.println("Sua media eh:" + media);
+		input.close(); 
+	}
+	
 }

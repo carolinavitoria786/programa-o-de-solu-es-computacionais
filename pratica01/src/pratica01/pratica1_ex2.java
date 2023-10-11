@@ -1,24 +1,26 @@
 package pratica01;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class pratica1_ex2 {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		String conversao;
 		
-		System.out.print("Insira o ano de nascimento: ");
-		int anoDeNascimento = input.nextInt();
-		System.out.print("Insira o ano atual: ");
-		int anoAtual = input.nextInt();
+		double num1, num2, num3, media;
 		
-		int idade = anoAtual - anoDeNascimento;
-		int idade2050 = 2050 - anoDeNascimento;
+		conversao = JOptionPane.showInputDialog("Insira a primeira nota: ");
+		num1 = Double.parseDouble(conversao);
 		
-		System.out.println("A idade da pessoa neste ano é: " + idade + "anos.");
-		System.out.println("A idade da pessoa no ano de 2050 será: " + idade2050 + "anos.");
-		input.close();
+	    conversao = JOptionPane.showInputDialog("Insira a segunda nota: ");
+	    num2 = Double.parseDouble(conversao);
 		
+		conversao = JOptionPane.showInputDialog("Insira a terceira nota: ");
+		num3 = Double.parseDouble(conversao);
+		
+		media = (num1 + num2 + num3) / 3;
+		
+		JOptionPane.showMessageDialog(null, "A média é: " + media);
 	}
 
 }

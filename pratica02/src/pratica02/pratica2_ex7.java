@@ -37,7 +37,6 @@ public class pratica2_ex7 {
 			System.out.println("Valor da equação: x1 =" + x1 + ", x2 = " + x2);
         }
     }
-
 		input.close();
     }
 }

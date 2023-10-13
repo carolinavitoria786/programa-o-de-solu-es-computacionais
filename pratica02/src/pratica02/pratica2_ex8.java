@@ -1,25 +1,58 @@
 package pratica02;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class pratica2_ex8 {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-	//Definição de produtos e seus respectivos preços.
-	String[] produtos = {"Sapato", "Bolsa", "Camisa", "Calsa", "Blusa"};	
-	double[] precos = {99.99, 103.89, 49.98, 89.72, 97.35};
-	System.out.println("Informe o codigo do produto(1 a 5): ");
-	
-	int codigo = scanner.nextInt();
-	//Criando um intervalo para o código. 
-	if (codigo >=1 && codigo <=5) {
-		String produto =  produtos[codigo];
-		double preco = precos[codigo];
-		System.out.println("Produto: " + produto);
-		System.out.println("Preço: " + preco);
-	}else {
-		System.out.println("Código inesistente");
-	}
-	scanner.close();
-	}
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o código do produto (1 a 5):");
+        int codigo = scanner.nextInt();
+
+        double preco = 0.0;
+
+        switch (codigo) {
+            case 1:
+                preco = 99.99;
+                break;
+            case 2:
+                preco = 103.89;
+                break;
+            case 3:
+                preco = 49.98;
+                break;
+            case 4:
+                preco = 89.72;
+                break;
+            case 5:
+                preco = 97.35;
+                break;
+            default:
+                System.out.println("Código de produto inválido.");
+                scanner.close();
+                return;
+        }
+
+        System.out.println("Produto: " + obterNomeProduto(codigo));
+        System.out.println("Preço: R$ " + preco);
+
+        scanner.close();
+    }
+
+    public static String obterNomeProduto(int codigo) {
+        switch (codigo) {
+            case 1:
+                return "Sapato";
+            case 2:
+                return "Bolsa";
+            case 3:
+                return "Camisa";
+            case 4:
+                return "Calça";
+            case 5:
+                return "Blusa";
+            default:
+                return "Desconhecido";
+        }
+    }
 }

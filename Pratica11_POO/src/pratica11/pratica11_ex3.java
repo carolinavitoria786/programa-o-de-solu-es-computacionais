@@ -8,7 +8,7 @@ class Pessoa {
 
  public Pessoa(String nome) {
      this.nome = nome; 
-// uso do this(um construtor) pra evitar imprecisão (pois define o valor do nome usando o valor do nome)
+// uso do this(um construtor) pra ser precisa (pois define o valor do nome usando o valor do nome)
  }
 
  public String getNome() {
